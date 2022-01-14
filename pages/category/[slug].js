@@ -1,10 +1,10 @@
 import { gql } from "@apollo/client";
-import client from "../../apolloClient";
+import client from "@/lib/apolloClient";
 import Image from "next/image";
-import ThreeColumns from "../../components/PostTemplate/ThreeColumns";
+import ThreeColumns from "@/components/PostTemplate/ThreeColumns";
 import tw from "twin.macro";
-import { Container } from "../../components/Container";
-import Hero from "../../components/Secton/Hero";
+import { Container } from "@/components/Container";
+import Hero from "@/components/Secton/Hero";
 const CategorySlug = ({ posts }) => {
 
     const { categories: { name: categoryName, description } } = posts[0];

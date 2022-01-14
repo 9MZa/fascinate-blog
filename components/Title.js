@@ -24,7 +24,7 @@ const TextColor = {
     "white": tw`text-white`,
     "paragraph": tw`text-gray-600`,
     "category": tw`text-primary-500`,
-
+    "light": tw`text-gray-400`,
 };
 
 

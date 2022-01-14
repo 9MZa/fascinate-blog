@@ -4,9 +4,13 @@ import { Heading, Text } from "../Title";
 import Category from "../Category";
 import Link from "next/link";
 import { Read } from "../Button";
+import CalcReadingTime from "@/lib/minuteRead";
+import Point from "../Point";
+
 const Big = ({ post }) => {
 
-    const { title, excerpt, slug, categories, thumbnail: { url: thumbnail } } = post[0];
+    const { title, excerpt, slug, categories, content: { text },
+        thumbnail: { url: thumbnail } } = post[0];
 
     return (
         <div tw="flex items-center">
@@ -25,7 +29,7 @@ const Big = ({ post }) => {
                             <Category category={categories} />
                         </Text>
                         <Point />
-                        <Text>5 min read</Text>
+                        <Text><CalcReadingTime text={text} /></Text>
                     </div>
                     <div tw="">
                         <Link href={`/post/${slug}`}>
@@ -47,11 +51,3 @@ const Big = ({ post }) => {
 };
 
 export default Big;
-
-const Point = styled.div`
-${tw`text-lg text-gray-500`} 
-
-::after{
-    content: "\u2022";
-}
-`;

@@ -1,9 +1,9 @@
 import tw from "twin.macro";
-import Big from "../components/Card/Big";
-import { Container } from "../components/Container";
+import Big from "@/components/Card/Big";
+import { Container } from "@/components/Container";
 import { gql } from "@apollo/client";
-import client from "../apolloClient";
-import RecentPost from "../components/Secton/RecentPost";
+import client from "@/lib/apolloClient";
+import RecentPost from "@/components/Secton/RecentPost";
 import Image from "next/image";
 
 const Index = ({ posts }) => {
@@ -23,6 +23,7 @@ const Index = ({ posts }) => {
 
       <RecentPost post={posts.slice(1, 7)} />
 
+
     </>
   );
 };
@@ -37,6 +38,9 @@ export async function getStaticProps() {
           title
           slug
           excerpt
+          content {
+            text
+          }
           thumbnail {
             url
           }

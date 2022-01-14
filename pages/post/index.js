@@ -1,14 +1,14 @@
-import { Container } from "../../components/Container";
+import { Container } from "@/components/Container";
 import { gql } from "@apollo/client";
-import client from "../../apolloClient";
-import AllPost from "../../components/Secton/AllPost";
+import client from "@/lib/apolloClient";
+import AllPost from "@/components/Secton/AllPost";
 import tw from "twin.macro";
-import Hero from "../../components/Secton/Hero";
+import Hero from "@/components/Secton/Hero";
 
 const PostAll = ({ posts }) => {
   return (
     <div>
-      <Hero color="secondary" title="All Post" size="small" subtitle="Aliquip incididunt cupidatat laboris enim officia nisi velit culpa in sint eu esse." />
+      <Hero color="secondary" title="All Post" subtitle="Aliquip incididunt cupidatat laboris enim officia nisi velit culpa in sint eu esse." />
       <Container>
         <AllPost post={posts} />
       </Container>
@@ -27,6 +27,9 @@ export async function getStaticProps() {
             title
             slug
             excerpt
+            content {
+              text
+            }
             thumbnail {
               url
             }
