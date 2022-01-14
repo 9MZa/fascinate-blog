@@ -1,21 +1,15 @@
 import Image from "next/image";
 import tw from "twin.macro";
 import Link from "next/link";
+import { Heading, Text } from "../Title";
+import Category from "../Category";
 const CommonCard = ({ post }) => {
 
-    const { title, excerpt, slug,
-        categories: { name: categoryName, slug: categorySlug },
-        thumbnail: { url: thumbnail }
-
-
-    } = post;
+    const { title, excerpt, slug, categories, thumbnail: { url: thumbnail } } = post;
 
     return (
-
-
         <Wrapper>
-            <div tw="w-full bg-gray-500 rounded overflow-hidden  h-52 relative">
-
+            <div tw="w-full rounded overflow-hidden  h-52 relative">
                 <Image
                     src={thumbnail}
                     alt={title}
@@ -23,20 +17,17 @@ const CommonCard = ({ post }) => {
                     layout="fill" />
             </div>
             <div tw="space-y-3 mt-4">
-                <div>
-                    <Link href={`/category/${categorySlug}`} passHref>
-                        <a tw="text-primary-500 text-sm">{categoryName}</a>
-                    </Link>
-                </div>
+                <Text color="category" size={6}><Category category={categories} /></Text>
                 <div>
                     <Link href={`/post/${slug}`} passHref>
-                        <a tw="text-gray-800 text-2xl font-semibold">{title}</a>
+                        <a>
+                            <Heading size={5}>{title}</Heading>
+                        </a>
                     </Link>
                 </div>
-                <p tw="text-gray-500"> {excerpt} </p>
+                <Text>{excerpt}</Text>
             </div>
         </Wrapper>
-
     );
 };
 

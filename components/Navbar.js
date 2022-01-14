@@ -25,7 +25,11 @@ const Navbar = () => {
                     <div tw="flex list-none text-gray-600  font-semibold space-x-8 items-center">
                         {NavList.map((item, i) => {
                             return (
-                                <li key={i}> {item.title} </li>
+                                <li key={i}>
+                                    <Link href={item.slug}>
+                                        <a> {item.title} </a>
+                                    </Link>
+                                </li>
                             );
                         })}
                         <button tw="bg-primary-500 font-bold px-4 py-1.5 text-white rounded" >
@@ -59,4 +63,4 @@ export default Navbar;
 
 const Wrapper = tw.nav`py-3  `;
 
-const SubNavWrap = tw.nav`flex list-none space-x-5 text-gray-600 text-sm   `;
+const SubNavWrap = tw.nav`flex list-none space-x-5 text-gray-600 text-sm `;

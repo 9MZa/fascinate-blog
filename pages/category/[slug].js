@@ -4,16 +4,14 @@ import Image from "next/image";
 import ThreeColumns from "../../components/PostTemplate/ThreeColumns";
 import tw from "twin.macro";
 import { Container } from "../../components/Container";
+import Hero from "../../components/Secton/Hero";
 const CategorySlug = ({ posts }) => {
 
-    const { categories: { name } } = posts[0];
+    const { categories: { name: categoryName, description } } = posts[0];
 
     return (
         <>
-            <div tw="max-w-6xl mx-auto py-10 space-y-5" >
-                <h1 tw="text-5xl font-semibold "> {name} Posts </h1>
-                <p>Dicta nihil ratione corrupti. Aut dolorem dolores omnis laboriosam ratione sequi. Provident ad sed velit. Est ea ab.</p>
-            </div>
+            <Hero color="secondary" title={`${categoryName} Post`} subtitle={description} />
             <Container>
                 <ThreeColumns post={posts} />
             </Container>
@@ -54,6 +52,7 @@ export async function getStaticProps({ params }) {
           categories{
             name
             slug
+            description
           }
           thumbnail{
               url

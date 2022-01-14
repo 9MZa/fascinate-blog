@@ -1,9 +1,10 @@
-const Button = () => {
-    return (
-        <div>
+import tw from "twin.macro";
 
-        </div>
-    );
-};
 
-export default Button;
+const Button = tw.button`
+text-gray-800 text-base
+`;
+
+export const Read = tw(Button)`
+
+`;

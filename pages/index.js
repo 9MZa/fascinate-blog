@@ -12,11 +12,11 @@ const Index = ({ posts }) => {
 
       <div tw="bg-gray-50 py-10">
         <Container >
-          <Big />
+          <Big post={posts.slice(0, 1)} />
         </Container>
       </div>
 
-      <RecentPost post={posts.slice(0, 6)} />
+      <RecentPost post={posts.slice(1, 7)} />
 
     </>
   );
