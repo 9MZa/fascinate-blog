@@ -61,6 +61,6 @@ const Navbar = () => {
 
 export default Navbar;
 
-const Wrapper = tw.nav`py-3  `;
+const Wrapper = tw.nav`py-3 shadow-sm relative `;
 
 const SubNavWrap = tw.nav`flex list-none space-x-5 text-gray-600 text-sm `;
