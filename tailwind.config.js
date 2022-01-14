@@ -1,7 +1,7 @@
 const { color } = require("./theme");
 
 module.exports = {
-  darkMode: "class",
+  content: [],
   theme: {
     colors: color,
     extend: {},
