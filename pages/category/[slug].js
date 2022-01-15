@@ -4,13 +4,27 @@ import ThreeColumns from "@/elements/PostTemplate/ThreeColumns";
 import tw from "twin.macro";
 import { Container } from "@/elements/Container";
 import Hero from "@/components/Section/Hero";
+import { NextSeo } from "next-seo";
+import SEO from "next-seo.config";
+
 const CategorySlug = ({ posts }) => {
 
-    const { categories: { name: categoryName, description } } = posts[0];
+    const { categories: { name: categoryName, description, slug } } = posts[0];
+
+    const { title } = SEO;
 
     return (
         <>
-            <Hero color="secondary" title={`${categoryName} Post`} subtitle={description} />
+            <NextSeo
+                title={`${categoryName} Posts | ${title}`}
+                description={description}
+                openGraph={{
+                    url: `https://localhost/category/${slug}`,
+                    title: categoryName,
+                    description: description,
+                }}
+            />
+            <Hero color="secondary" title={`${categoryName} Posts`} subtitle={description} />
             <Container>
                 <ThreeColumns post={posts} />
             </Container>
