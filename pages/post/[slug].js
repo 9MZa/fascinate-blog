@@ -8,6 +8,7 @@ import Category from "@/elements/Category";
 import { Heading, Text } from "@/components/Elements/Title";
 import dayjs from "dayjs";
 import { NextSeo } from "next-seo";
+import SEO from "next-seo.config";
 
 const PostSlug = ({ post }) => {
 
@@ -17,13 +18,15 @@ const PostSlug = ({ post }) => {
         content: { html: content, text },
     } = post;
 
+    const { url } = SEO;
+
     return (
         <>
             <NextSeo
                 title={title}
                 description={excerpt}
                 openGraph={{
-                    url: `https://localhost/${slug}`,
+                    url: `${url}/${slug}`,
                     title: title,
                     description: excerpt,
                     images: [

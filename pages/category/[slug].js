@@ -11,7 +11,7 @@ const CategorySlug = ({ posts }) => {
 
     const { categories: { name: categoryName, description, slug } } = posts[0];
 
-    const { title } = SEO;
+    const { title, url } = SEO;
 
     return (
         <>
@@ -19,7 +19,7 @@ const CategorySlug = ({ posts }) => {
                 title={`${categoryName} Posts | ${title}`}
                 description={description}
                 openGraph={{
-                    url: `https://localhost/category/${slug}`,
+                    url: `${url}/category/${slug}`,
                     title: categoryName,
                     description: description,
                 }}

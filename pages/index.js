@@ -8,7 +8,7 @@ import SEO from "next-seo.config";
 
 const Index = ({ posts }) => {
 
-  const { title, description } = SEO;
+  const { title, description, url } = SEO;
 
   return (
     <>
@@ -16,7 +16,7 @@ const Index = ({ posts }) => {
         title={`${title} Blog`}
         description={description}
         openGraph={{
-          url: "https://localhost/",
+          url: `${url}/`,
           title: title,
           description: description,
         }}
