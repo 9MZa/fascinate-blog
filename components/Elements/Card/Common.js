@@ -1,7 +1,7 @@
 import Image from "next/image";
 import tw from "twin.macro";
 import Link from "next/link";
-import { Heading, Text } from "@/components/Title";
+import { Heading, Text } from "@/components/Elements/Title";
 import Category from "@/elements/Category";
 const CommonCard = ({ post }) => {
 

@@ -18,5 +18,5 @@ const RecentPost = ({ post }) => {
 
 export default RecentPost;
 
-const Wrapper = tw.div`my-5`;
+const Wrapper = tw.div`my-20`;
 

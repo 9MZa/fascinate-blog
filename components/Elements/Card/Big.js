@@ -1,6 +1,6 @@
 import tw, { styled } from "twin.macro";
 import Image from "next/image";
-import { Heading, Text } from "@/components/Title";
+import { Heading, Text } from "@/components/Elements/Title";
 import Category from "@/elements/Category";
 import Link from "next/link";
 import { Read } from "@/elements/Button";

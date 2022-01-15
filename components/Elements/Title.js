@@ -19,6 +19,10 @@ const TextSize = {
     7: tw`text-xs`,
 };
 
+const HeadingColor = {
+    "black": tw`text-gray-800`,
+    "white": tw`text-white`,
+};
 
 const TextColor = {
     "white": tw`text-white`,
@@ -31,6 +35,7 @@ const TextColor = {
 export const Heading = styled.h1(({ }) => [
     tw`font-semibold`,
     ({ size = 3 }) => HeadingSize[size],
+    ({ color = "black" }) => HeadingColor[color],
 ]);
 
 
