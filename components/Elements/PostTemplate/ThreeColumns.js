@@ -1,4 +1,4 @@
-import CommonCard from "../Card/Common";
+import CommonCard from "@/elements/Card/Common";
 import tw from "twin.macro";
 
 const ThreeColumns = ({ post }) => {

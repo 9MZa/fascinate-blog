@@ -3,8 +3,8 @@ import { gql } from "@apollo/client";
 import client from "@/lib/apolloClient";
 import Image from "next/image";
 import CalcReadingTime from "@/lib/minuteRead";
-import Point from "@/components/Point";
-import Category from "@/components/Category";
+import Point from "@/elements/Point";
+import Category from "@/elements/Category";
 import { Heading, Text } from "@/components/Title";
 import dayjs from "dayjs";
 const PostSlug = ({ post }) => {

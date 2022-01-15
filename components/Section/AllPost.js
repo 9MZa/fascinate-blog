@@ -1,6 +1,6 @@
 import tw from "twin.macro";
-import ThreeColumns from "../PostTemplate/ThreeColumns";
-import { Container } from "../Container";
+import ThreeColumns from "@/elements/PostTemplate/ThreeColumns";
+import { Container } from "@/elements/Container";
 
 
 const AllPost = ({ post }) => {

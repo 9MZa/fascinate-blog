@@ -1,5 +1,5 @@
 import tw from "twin.macro";
-import { Container } from "./Container";
+import { Container } from "@/elements/Container";
 
 const Footer = () => {
     return (

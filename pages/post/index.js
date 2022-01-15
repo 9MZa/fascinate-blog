@@ -1,9 +1,9 @@
-import { Container } from "@/components/Container";
+import { Container } from "@/elements/Container";
 import { gql } from "@apollo/client";
 import client from "@/lib/apolloClient";
-import AllPost from "@/components/Secton/AllPost";
+import AllPost from "@/section/AllPost";
 import tw from "twin.macro";
-import Hero from "@/components/Secton/Hero";
+import Hero from "@/section/Hero";
 
 const PostAll = ({ posts }) => {
   return (

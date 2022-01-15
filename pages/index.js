@@ -1,10 +1,10 @@
 import tw from "twin.macro";
-import Big from "@/components/Card/Big";
-import { Container } from "@/components/Container";
+import Big from "@/components/Elements/Card/Big";
+import { Container } from "@/elements/Container";
 import { gql } from "@apollo/client";
 import client from "@/lib/apolloClient";
-import RecentPost from "@/components/Secton/RecentPost";
-import Image from "next/image";
+import RecentPost from "@/section/RecentPost";
+
 
 const Index = ({ posts }) => {
 

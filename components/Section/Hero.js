@@ -1,6 +1,6 @@
 import tw, { styled } from "twin.macro";
-import { Text, Heading } from "../Title";
-import { Container } from "../Container";
+import { Text, Heading } from "@/components/Title";
+import { Container } from "@/elements/Container";
 
 const Hero = ({ title, subtitle, size, color }) => {
     return (

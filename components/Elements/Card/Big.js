@@ -1,11 +1,11 @@
 import tw, { styled } from "twin.macro";
 import Image from "next/image";
-import { Heading, Text } from "../Title";
-import Category from "../Category";
+import { Heading, Text } from "@/components/Title";
+import Category from "@/elements/Category";
 import Link from "next/link";
-import { Read } from "../Button";
+import { Read } from "@/elements/Button";
 import CalcReadingTime from "@/lib/minuteRead";
-import Point from "../Point";
+import Point from "@/elements/Point";
 
 const Big = ({ post }) => {
 
