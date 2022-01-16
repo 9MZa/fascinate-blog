@@ -22,6 +22,7 @@ const TextSize = {
 const HeadingColor = {
     "black": tw`text-gray-800`,
     "white": tw`text-white`,
+    "primary": tw`text-primary-500`,
 };
 
 const TextColor = {

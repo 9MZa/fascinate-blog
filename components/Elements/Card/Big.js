@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Heading, Text } from "@/components/Elements/Title";
 import Category from "@/elements/Category";
 import Link from "next/link";
-import { Read } from "@/elements/Button";
+import { ReadButton } from "@/elements/Button";
 import CalcReadingTime from "@/lib/minuteRead";
 import Point from "@/elements/Point";
 
@@ -22,7 +22,7 @@ const Big = ({ post }) => {
                 />
             </div>
             {/* Text  */}
-            <div tw="w-1/2  ">
+            <div tw="w-1/2">
                 <div tw="w-4/5 space-y-5" >
                     <div tw="flex text-sm space-x-3 items-center">
                         <Text color="category" >
@@ -39,11 +39,11 @@ const Big = ({ post }) => {
                         </Link>
                     </div>
                     <Text>{excerpt}</Text>
-                    <Read>
+                    <ReadButton>
                         <Link href={`/post/${slug}`}>
                             <a>Read Post</a>
                         </Link>
-                    </Read>
+                    </ReadButton>
                 </div>
             </div>
         </div>

@@ -2,12 +2,13 @@ import tw, { styled } from "twin.macro";
 import { Text, Heading } from "@/components/Elements/Title";
 import { Container } from "@/elements/Container";
 
-const Hero = ({ title, subtitle, size, color }) => {
+const Hero = ({ title, subtitle, size, color, children }) => {
     return (
         <Wrapper size={size} color={color}>
             <Container tw="space-y-5">
-                <Heading size={2}>{title}</Heading>
+                <Heading color={color} size={2}>{title}</Heading>
                 <Text color={color}>{subtitle}</Text>
+                {children}
             </Container>
         </Wrapper>
     );
@@ -23,7 +24,7 @@ const Wrapper = styled.div(() => [
 ]);
 
 const HeroSize = {
-    "large": tw`py-32`,
+    "large": tw`py-44`,
     "medium": tw`py-24`,
     "small": tw`py-14`,
 };

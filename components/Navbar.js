@@ -2,13 +2,14 @@ import tw from "twin.macro";
 import { Container } from "@/elements/Container";
 import Link from "next/link";
 import Logo from "./Logo";
+import { SubscribeButton } from "./Elements/Button";
 
 const NavList = [
     { title: "All Post", slug: "/post" },
     { title: "About", slug: "/about" }
 ];
 
-const SubNavList = [
+export const CategoryList = [
     { title: "Product", slug: "product" },
     { title: "Management", slug: "management" },
     { title: "Balance", slug: "balance" },
@@ -32,9 +33,9 @@ const Navbar = () => {
                                 </li>
                             );
                         })}
-                        <button tw="bg-primary-500 font-bold px-4 py-1.5 text-white rounded" >
+                        <SubscribeButton>
                             Subscribe
-                        </button>
+                        </SubscribeButton>
                     </div>
                 </div>
             </Container>
@@ -43,7 +44,7 @@ const Navbar = () => {
 
             <Container>
                 <SubNavWrap>
-                    {SubNavList.map((item, i) => {
+                    {CategoryList.map((item, i) => {
                         return (
                             <Link href={`/category/${item.slug}`} key={i}>
                                 <a>

@@ -11,7 +11,7 @@ const FeaturePost = ({ post }) => {
                     <Big post={post} />
                 </Container>
             </Wrapper>
-            <Devider position="bottom" />
+            {/* <Devider position="bottom" /> */}
         </>
     );
 };

@@ -1,15 +1,15 @@
-import tw from "twin.macro";
+import tw, { styled } from "twin.macro";
 
 
-const Button = tw.button`
-text-gray-800 text-base
+export const Button = tw.button`
+text-base px-4 py-2 font-semibold rounded
 `;
 
-export const Read = tw(Button)`
+export const SubscribeButton = styled(Button)(({ onBG }) => [
+    tw`bg-primary-500 text-white`,
+    onBG && tw`bg-primary-600`,
+]);
 
-`;
-
-export const SubscribeButton = tw(Button)`
-bg-primary-600 text-white px-4 py-2 font-bold rounded
-
+export const ReadButton = styled(Button)`
+${tw`font-normal text-base px-0 text-gray-600 hover:text-gray-700 transition`}
 `;
