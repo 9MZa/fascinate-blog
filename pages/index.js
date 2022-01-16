@@ -1,7 +1,8 @@
 import { gql } from "@apollo/client";
 import client from "@/lib/apolloClient";
-import RecentPost from "@/section/RecentPost";
+import { FirstRecents, SecondRecents } from "@/components/Section/RecentPost";
 import FeaturePost from "@/section/FeaturePost";
+
 import Subscribe from "@/section/Subscribe";
 import { NextSeo } from "next-seo";
 import SEO from "next-seo.config";
@@ -22,7 +23,8 @@ const Index = ({ posts }) => {
         }}
       />
       <FeaturePost post={posts.slice(0, 1)} />
-      <RecentPost post={posts.slice(1, 7)} />
+      <FirstRecents post={posts.slice(1, 7)} />
+      <SecondRecents post={posts.slice(0, 4)} />
       <Subscribe />
     </>
   );
