@@ -62,6 +62,9 @@ export async function getStaticProps({ params }) {
           title
           slug
           excerpt
+          content{
+              text
+          }
           categories{
             name
             slug
