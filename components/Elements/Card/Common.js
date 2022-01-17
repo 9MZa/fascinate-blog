@@ -29,10 +29,10 @@ const CommonCard = ({ post, coverSize }) => {
                             <Category category={categories} />
                         </Text>
                     </div>
-                    {coverSize === "large" ? <Point /> : null}
+                    <Point />
                     <div>
                         <Text size={7}>
-                            {coverSize === "large" ? <CalcReadingTime text={text} /> : null}
+                            <CalcReadingTime text={text} />
                         </Text>
                     </div>
                 </div>
