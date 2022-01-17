@@ -4,7 +4,6 @@ import { Container } from "@/elements/Container";
 import { SubscribeButton } from "@/elements/Button";
 import Devider from "@/elements/Devider";
 
-
 const headText = "Subscribe to our newsletter";
 const bodyText = "Signup for our weekly newsletter to get the latest news, updates and amazing offers delivered directly in your inbox";
 
@@ -20,9 +19,8 @@ const Subscribe = () => {
                             <Text color="white">{bodyText}</Text>
                         </div>
                         <div tw="space-x-2">
-                            <input tw="rounded px-4 py-2" placeholder="Enter your Email"
-                            />
-                            <SubscribeButton onBG> Subscribe </SubscribeButton>
+                            <input tw="px-3 py-2 rounded focus:outline-none   " placeholder="Enter your email" />
+                            <SubscribeButton hasBG> Subscribe </SubscribeButton>
 
                         </div>
                     </Wrapper>

@@ -10,6 +10,7 @@ import Link from "next/link";
 import { CategoryList } from "./Navbar";
 import { Heading, Text } from "@/elements/Title";
 import Logo from "./Logo";
+import { SubscribeButton } from "./Elements/Button";
 
 const Footer = () => {
 
@@ -35,10 +36,16 @@ const Footer = () => {
                             </div>
                             <div tw="w-1/2 space-y-2">
                                 <Heading color="primary" size={7}> Category </Heading>
-                                <div>
+                                <div tw="space-y-1">
                                     {CategoryList.map((item, i) => {
                                         return (
-                                            <Text key={i}> {item.title} </Text>
+                                            <Text key={i}>
+                                                <Link href={`/category/${item.slug}`}>
+                                                    <a>
+                                                        {item.title}
+                                                    </a>
+                                                </Link>
+                                            </Text>
                                         );
                                     })}
                                 </div>
@@ -50,6 +57,16 @@ const Footer = () => {
                                 Sign up for the Frequency Blog.
                                 Get the latest news, company insights, and Frequency updates.
                             </Text>
+                            <div tw="pt-5">
+                                <form tw="flex ">
+                                    <input tw="text-gray-800 border-gray-200 bg-white border-l border-b border-t rounded-l px-3 py-1.5 outline-none
+                                    focus:border-primary-600 placeholder:text-gray-300
+                                    " placeholder="Enter your email" />
+                                    <SubscribeButton tw="rounded-none rounded-r" >
+                                        Subscribe
+                                    </SubscribeButton>
+                                </form>
+                            </div>
                         </div>
                     </div>
                     <div tw="border-t border-gray-50 mt-20 mb-5" />
