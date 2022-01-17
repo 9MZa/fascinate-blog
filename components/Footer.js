@@ -24,7 +24,7 @@ const Footer = () => {
                         <div tw="w-1/3"><Logo /></div>
                         <div tw="w-1/3 flex">
                             <div tw="w-1/2 space-y-2">
-                                <Heading color="primary" size={7}>Blog</Heading>
+                                <Heading color="primary" size={7}>Page</Heading>
                                 <div tw="space-y-1">
                                     <Text size={5}>
                                         <Link href="/about"><a>About</a></Link>
@@ -60,8 +60,8 @@ const Footer = () => {
                             <div tw="pt-5">
                                 <form tw="flex ">
                                     <input tw="text-gray-800 border-gray-200 bg-white border-l border-b border-t rounded-l px-3 py-1.5 outline-none
-                                    focus:border-primary-600 placeholder:text-gray-300
-                                    " placeholder="Enter your email" />
+                                    focus:border-primary-600 focus:ring-primary-200 focus:ring-2 placeholder:text-gray-300 transition
+                                    " placeholder="example@email.com" />
                                     <SubscribeButton tw="rounded-none rounded-r" >
                                         Subscribe
                                     </SubscribeButton>
