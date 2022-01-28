@@ -4,6 +4,7 @@ import tw from "twin.macro";
 import team from "images/team.svg";
 import Image from "next/image";
 import { Container } from "@/components/Elements/Container";
+import Subscribe from "@/components/Section/Subscribe";
 
 const Title = "Fascinate team";
 const Detail = "Proident cupidatat commodo qui eiusmod irure. Cillum quis elit et do fugiat sit mollit proident magna culpa.";
@@ -26,7 +27,6 @@ const About = () => {
             <Hero>
                 <div tw="flex text-center">
                     <div tw="w-1/3 ">
-
                         <Heading size={2} color="white"> 6,000+ </Heading>
                         <Text color="white">
                             subscribers, and growing fast
@@ -40,10 +40,14 @@ const About = () => {
                         <Heading size={2} color="white"> 80+  </Heading>
                         <Text color="white"> Mentions in industry journals </Text>
                     </div>
-
                 </div>
             </Hero>
+            <Subscribe />
 
+            <Hero>
+
+                <Heading>Our Team</Heading>
+            </Hero>
         </>
     );
 };
